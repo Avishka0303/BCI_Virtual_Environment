@@ -9,6 +9,7 @@ public class LeftWall: MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         Vector3 initPosition = new Vector3(0f,1.91f,-15.68f);
         other.gameObject.transform.position = initPosition;
-        scoreText.text = "Left wall hitted.";
+        print("left wall hitted.");
+        ScorePanel.score_dict["Left"].score += 1;
     }
 }
